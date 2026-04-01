@@ -22,7 +22,7 @@ const VOICE_CONFIGS = {
   },
   vampire: {
     name: "Charon",
-    style: "You are a suave, sophisticated, and slightly evil aristocrat vampire. Speak with devilish charm."
+    style: "You are a suave, sophisticated, and slightly evil british aristocrat vampire. Speak with devilish charm."
   },
   pirate: {
     name: "Charon",
@@ -38,11 +38,11 @@ const VOICE_CONFIGS = {
   },
   cowboy: {
     name: "Charon",
-    style: "You are an old man, you speak only in old man tone and inflections."
+    style: "You are a cowboy, you speak only in cowboy tone and inflections."
   }
 };
 
-let currentVoice = "cowboy"; // Default voice
+let currentVoice = "cowboy";
 
 const ttsModel = genAI.getGenerativeModel({ 
   model: "gemini-2.5-pro-preview-tts"
@@ -70,7 +70,7 @@ async function setupMcpClient() {
  * Play audio buffer using Windows PowerShell
  */
 /**
- * Helper to wrap raw PCM data in a WAV (RIFF) header so Windows can play it.
+ * Helper to wrap raw PCM data in a WAV header so Windows can play it.
  */
 function addWavHeader(pcmBuffer, sampleRate = 24000) {
   const header = Buffer.alloc(44);

@@ -124,6 +124,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
 /**
  * Start the server using stdio transport.
+ * https://mcp-framework.com/docs/Transports/stdio-transport/
  */
 async function main() {
   const transport = new StdioServerTransport();
