@@ -1,26 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --background-start-rgb: 15, 23, 42;
-  --background-end-rgb: 4, 7, 13;
-  --foreground-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-start-rgb: 4, 7, 13;
-    --background-end-rgb: 15, 23, 42;
-    --foreground-rgb: 255, 255, 255;
-  }
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f4f4f5; /* zinc-100 */
+  background-color: #09090b; /* zinc-950 */
 }
+
